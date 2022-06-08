@@ -1,0 +1,40 @@
+<%- layout("boiler")-%>
+<div style="margin-top: 10px;">
+    <h2 style="text-align: center; color:blueviolet">View Customer Data</h2>
+</div>
+
+<div class="container">
+<table class="table table bordered">
+
+    <tr> 
+        
+        <th>CUSTOMER ID</th>
+        <th>ACCOUNT NO</th>
+        <th>CUSTOMER NAME</th>
+        <th>CUSTOMER CITY</th>
+        
+    </tr>
+    <% for( let index=0; index < rows.length; index++ ) 
+    { %>
+    <tr>
+        
+        <td>		
+            <%=rows[index].cid%>
+        </td>
+        <td>
+            <%=rows[index].anum%>
+        </td>
+        <td>
+            <%=rows[index].cname%>
+        </td>
+        <td>
+            <%=rows[index].city%>
+        </td>
+       
+    </tr>
+    <% } %>
+
+</table>
+
+<button type="button" ONCLICK="history.back()">BACK</button>
+</div>

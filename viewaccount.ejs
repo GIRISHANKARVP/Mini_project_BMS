@@ -1,0 +1,36 @@
+<%- layout("boiler")-%>
+<div style="margin-top: 10px;">
+    <h2 style="text-align: center;color:blueviolet">View account Data</h2>
+</div>
+
+<div class="container">
+<table class="table table bordered">
+
+    <tr> 
+        
+        <th>ACCOUNT NO</th>
+        <th>BRANCH ID</th>
+        <th>BALANCE</th>
+        
+    </tr>
+    <% for( let index=0; index < rows.length; index++ ) 
+    { %>
+    <tr>
+        
+        <td>
+            <%=rows[index].anum%>
+        </td>
+        <td>
+            <%=rows[index].bid%>
+        </td>
+        <td>
+            <%=rows[index].balance%>
+        </td>
+       
+    </tr>
+    <% } %>
+
+</table>
+
+<button type="button" ONCLICK="history.back()">BACK</button>
+</div>

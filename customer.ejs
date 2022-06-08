@@ -1,0 +1,48 @@
+<%- layout("boiler")-%>
+<body style="background-color:rgb(199, 241, 233)">
+<nav class="navbar navbar-expand-sm bg-warning navbar-dark">
+   <div class="container-fluid">
+    <ul class="navbar-nav">
+     <li class="nav-item">
+      <a class="nav-link " href="/branch" style="color:rgb(0, 98, 255)">Branch</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="/account "  style="color:red">Account</a>
+    
+     </li>
+     <li class="nav-item">
+      <a class="nav-link active" href="/customer"  style="color:rgb(3, 0, 10);background-color: rgb(199, 241, 233);">Customer</a>
+     </li>
+    </ul>
+   </div>
+   </nav>
+  <div class="container">
+   <form action="customer" method="post">
+      <table class="table ">
+          <h2 style="text-align: center;color:rgb(52, 204, 41);">Enter Customer Details</h2>
+          <tr>
+              <td ><b> Customer ID</b> <br></td>
+              <td> <input class="form-control" type="text" name="ci" id="i"></td>
+          </tr>
+          <tr>
+            <td ><b> Account No</b> <br></td>
+            <td> <input class="form-control" type="text" name="an" id="an"></td>
+        </tr>
+          <tr>
+              <td ><b> Customer Name</b> <br></td>
+              <td> <input class="form-control" type="text" name="cn" id="n" > </td>
+              
+          </tr>
+          <tr>
+              <td><b>City</b><br></td>
+              <td> <input type="text" class="form-control" name="c" id="c" ></td>
+          </tr>
+          <BR><BR>
+          <button  class="btn btn-secondary " type="submit">INSERT</button>
+          <button formaction="/viewcustomer" formmethod="get" class="btn btn-success" style="margin-left:10px" >VIEW CUSTOMER</button>
+          <button formaction="/update" formmethod="post" class="btn btn-primary" style="margin-left:10px" >UPDATE CUSTOMER</button>
+
+        </table>
+ </form>
+ </div>
+</body>
